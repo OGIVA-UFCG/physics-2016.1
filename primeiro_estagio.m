@@ -1,22 +1,21 @@
 clc % limpar variaveis
 
-n = 2; % numero de cargas
+n = 4; % numero de cargas pontuais
 
-% coordenadas
-x = [0, 1];
-y = [0, 0];
+% coordenadas das cargas pontuais
+x = [0, 5, 5, 0];
+y = [5, 5, 0, 0];
 %fim
-display(x);
 
-% cargas
-q = [-5, 2];
+% valor das cargas
+q = [10, -20, 20, -10];
 
 % constante de Coulumb
 ke = 8.9875517873681764e9;
 
 % intervalo do campo eletrico
-xi = linspace(-1,1,10);
-yi = linspace(-1,1,10);
+xi = linspace(-20,20,133);
+yi = linspace(-20,20,133);
 %fim
 
 % preparação do grafico e das linhas de campo
@@ -42,6 +41,6 @@ figure
 quiver(XI,YI,Ex./E,Ey./E);
 hold on
 plot(x, y, 'or')
-axis equal
+axis([-20 20 -20 20])
 grid on
 % EOF
