@@ -31,7 +31,7 @@ dZ = ZI-Z;
 
 Zn = abs(dZ);
 
-E = (dZ./Zn.^2)*(q(:)*ke);
+E = (dZ./Zn.^3)*(q(:)*ke);
 E = reshape(E, size(XI));
 En = abs(E);
 Ex = real(E);
