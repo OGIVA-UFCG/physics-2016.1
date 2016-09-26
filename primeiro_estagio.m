@@ -28,9 +28,10 @@ z = complex(x,y);
 [ZI, Z] = ndgrid(zi(:),z(:));
 
 dZ = ZI-Z;
+
 Zn = abs(dZ);
 
-E = (dZ./Zn.^3)*(q(:)*ke);
+E = (dZ./Zn.^2)*(q(:)*ke);
 E = reshape(E, size(XI));
 En = abs(E);
 Ex = real(E);
@@ -53,13 +54,13 @@ text(5, 5, '\leftarrow q2')
 text(5, 0, '\leftarrow q3')
 text(0, 0, '\leftarrow q4')
 
-E=char('\rightarrow', 'E = E_yj = (1.02x10^5 N/C)j');
+C = char('\rightarrow', 'E = E_yj = (1.02x10^5 N/C)j');
 
 % caixa de texto com os dados
 annotation('textbox',...
     [0.0251581259150805 0.207055214723926 0.134431918008785 0.699386503067485],...
     'String',{'a = 5cm', '', 'q1 = +10,0nC','q2 = -20,0nC','q3 = +20,0nC', 'q4 = -10,0nC'...
-    '','E_x = 0','E_y = 1.02x10^5 N/C', '', E },...
+    '','E_x = 0','E_y = 1.02x10^5 N/C', '', C },...
     'FitBoxToText','on');
 
 axis equal
