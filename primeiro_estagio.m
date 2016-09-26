@@ -63,8 +63,6 @@ annotation('textbox',...
     '','E_x = 0','E_y = 1.02x10^5 N/C', '', C },...
     'FitBoxToText','on');
 
-
-
 axis equal
 grid on
 % EOF
