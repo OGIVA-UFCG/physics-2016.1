@@ -44,6 +44,7 @@ quiver(XI,YI,Ex./E,Ey./E);
 hold on
 
 plot(x, y, 'o')
+hold off
 
 title('Seção 22-3 / Questão 9')
 xlabel('eixo x')
@@ -54,7 +55,7 @@ text(5, 5, '\leftarrow q2')
 text(5, 0, '\leftarrow q3')
 text(0, 0, '\leftarrow q4')
 
-C = char('\rightarrow', 'E = E_yj = (1.02x10^5 N/C)j');
+C = char('\rightarrow', 'E = E_yj = (1.02x10^5 N/C) j');
 
 % caixa de texto com os dados
 annotation('textbox',...
